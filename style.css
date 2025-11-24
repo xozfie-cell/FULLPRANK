@@ -1,0 +1,143 @@
+/* style.css */
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #17e3be; /* Background utama solid */
+    font-family: 'Roboto Condensed', sans-serif; /* Default font */
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparan putih tipis, tidak mengganti background utama */
+    z-index: 1000;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #000; /* Warna teks untuk kontras */
+}
+
+/* Main Content Container */
+.container {
+    padding-top: 80px; /* Offset untuk header fixed */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+/* Kolom Styles - Mobile-first, 2 kolom per baris */
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolom per baris */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.column {
+    background-color: #188c77; /* Background kolom wajib */
+    box-shadow: 0 4px 8px #3e5450; /* Shadow warna spesifik */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    text-align: center;
+}
+.column img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.column p {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff; /* Warna teks kontras dengan #188c77 */
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Tombol WhatsApp */
+.whatsapp-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #25d366; /* Senada dengan WhatsApp, kontras tapi tidak mengganti background utama */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    text-align: center;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Quote Styles */
+.quote {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem; /* Ukuran besar untuk handwriting style */
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Opsional untuk readability, tapi tidak mengganti background utama */
+}
+footer span {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.9rem;
+}
+footer img {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Responsive Adjustments - Mobile-first, tapi tambahkan untuk tablet/desktop jika perlu */
+@media (min-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .columns {
+        gap: 15px;
+    }
+    .column p {
+        font-size: 1rem;
+    }
+    .quote {
+        font-size: 2rem;
+    }
+}
+
+/* Contoh CSS untuk video background opsional (jika digunakan, tambahkan ke style): */
+/*
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Agar tidak menimpa warna utama */
+}
+*/
